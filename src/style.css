@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.bird-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+.bird-card img {
+  @apply w-full h-48 object-cover;
+}
+
+.bird-info {
+  @apply p-4;
+}
+
+.bird-info h3 {
+  @apply text-lg font-bold text-gray-800 mb-1;
+}
+
+.bird-info p {
+  @apply text-gray-500 text-sm;
+}
+
+.btn-primary {
+  @apply bg-bird-primary text-white px-4 py-2 rounded-lg hover:bg-bird-secondary transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors;
+}
+
+.btn-success {
+  @apply bg-bird-green text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors;
+}
+
+.navbar {
+  @apply bg-white shadow-md sticky top-0 z-50;
+}
+
+.nav-link {
+  @apply px-4 py-2 text-gray-600 hover:text-bird-primary hover:bg-blue-50 rounded-lg transition-colors;
+}
+
+.nav-link.active {
+  @apply text-bird-primary font-bold bg-blue-50;
+}
+
+.sidebar {
+  @apply w-64 bg-white shadow-lg p-4;
+}
+
+.sidebar-title {
+  @apply text-lg font-bold text-gray-800 mb-4;
+}
+
+.sidebar-item {
+  @apply px-3 py-2 text-gray-600 hover:text-bird-primary hover:bg-blue-50 rounded-lg cursor-pointer transition-colors;
+}
+
+.sidebar-item.active {
+  @apply text-bird-primary font-bold bg-blue-50;
+}
+
+.progress-bar {
+  @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-bird-green rounded-full transition-all duration-500;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-xl p-6 max-w-md w-full mx-4;
+}
+
+.upload-area {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-bird-primary transition-colors cursor-pointer;
+}
+
+.upload-area.dragover {
+  @apply border-bird-primary bg-blue-50;
+}
